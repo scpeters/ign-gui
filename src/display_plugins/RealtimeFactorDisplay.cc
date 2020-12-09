@@ -308,7 +308,6 @@ void RealtimeFactorDisplay::ProcessMsg()
   }
   std::lock_guard<std::recursive_mutex> lock(this->dataPtr->mutex);
 
-  if (this->dataPtr->msg.has_real_time_factor())
   {
     // RTF as a percentage.
     double rtf = this->dataPtr->msg.real_time_factor() * 100;
