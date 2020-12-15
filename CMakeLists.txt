@@ -125,6 +125,7 @@ endif()
 # Configure the build
 #============================================================================
 ign_configure_build(QUIT_IF_BUILD_ERRORS)
+set(BUILD_TESTING OFF)
 
 #============================================================================
 # ign command line support
