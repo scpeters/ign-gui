@@ -169,7 +169,7 @@ TEST(ImageDisplayTest, ReceiveImage)
     msgs::Image msg;
     msg.set_height(100);
     msg.set_width(200);
-    msg.set_pixel_format(common::Image::RGB_FLOAT32);
+    msg.set_pixel_format_type(msgs::PixelFormatType::RGB_FLOAT32);
     pub.Publish(msg);
   }
 
@@ -192,7 +192,7 @@ TEST(ImageDisplayTest, ReceiveImage)
     msgs::Image msg;
     msg.set_height(100);
     msg.set_width(200);
-    msg.set_pixel_format(common::Image::RGB_INT8);
+    msg.set_pixel_format_type(msgs::PixelFormatType::RGB_INT8);
     pub.Publish(msg);
   }
 

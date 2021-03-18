@@ -135,14 +135,14 @@ void ImageDisplay::LoadConfig(const tinyxml2::XMLElement *_pluginElem)
 void ImageDisplay::ProcessImage()
 {
   std::lock_guard<std::recursive_mutex> lock(this->dataPtr->imageMutex);
-  switch (this->dataPtr->imageMsg.pixel_format())
+  switch (this->dataPtr->imageMsg.pixel_format_type())
   {
-    case common::Image::RGB_INT8:
+    case msgs::PixelFormatType::RGB_INT8:
       this->UpdateFromRgbInt8();
       break;
     default:
       ignerr << "Unsupported image type: " <<
-          this->dataPtr->imageMsg.pixel_format() << std::endl;
+          this->dataPtr->imageMsg.pixel_format_type() << std::endl;
   }
 }
 
